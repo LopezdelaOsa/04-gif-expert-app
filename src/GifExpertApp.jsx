@@ -9,8 +9,6 @@ export const GifExpertApp = () => {
 
     const [categorias, setCategorias] = useState(['Zelda'])
 
-    //console.log(categorias)
-
     const onAgregarCategoria = ( nuevaCategoria) => {
         //setCategorias( ['Kolog', ...categorias])
         // Otra forma de escribirlo:
