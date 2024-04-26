@@ -16,8 +16,6 @@ export const GifExpertApp = () => {
 
         //setCategorias ( cat =>  [...categorias, 'Lizardo', 'Moblin'] )
 
-
-        //console.log(nuevaCategoria)
         if (categorias.includes(nuevaCategoria)) return
 
         setCategorias( [nuevaCategoria, ...categorias])
