@@ -2,6 +2,7 @@
 //import { pillarGifs } from "../helpers/pillarRejilla"
 import { GifElemento } from "./GifElemento"
 import { useFetchGifs } from "../hooks/useFetchGifs"
+import PropTypes from 'prop-types'
 
 export const GifRejilla = ( { categoria } ) => {
 
@@ -19,7 +20,7 @@ export const GifRejilla = ( { categoria } ) => {
   const { imagenes, isLoading } = useFetchGifs(categoria)
 
   //console.log({imagenes, isLoading})
-  console.log(isLoading)
+  //console.log(isLoading)
     
   return (
     <>
@@ -50,4 +51,8 @@ export const GifRejilla = ( { categoria } ) => {
  
     </>
   )
+}
+
+GifRejilla.propTypes = {
+  categoria: PropTypes.string.isRequired
 }

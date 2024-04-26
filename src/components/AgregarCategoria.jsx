@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const AgregarCategoria = ( { onNuevaCategoria } ) => {
 
@@ -14,6 +15,7 @@ export const AgregarCategoria = ( { onNuevaCategoria } ) => {
 
     const onEnviar = (event) => {
         //console.log(event)
+        //console.log('Hola desde el submit')
         event.preventDefault()
         //console.log(valorInput)
         if (valorInput.trim().length <= 1) return
@@ -26,7 +28,7 @@ export const AgregarCategoria = ( { onNuevaCategoria } ) => {
 
   return (
     //<form onSubmit={ (event) => onEnviar(event)}>
-    <form onSubmit={ onEnviar }>
+    <form onSubmit={ onEnviar } aria-label="form">
         <input
             type="text"
             placeholder="Buscar gifs por tema"
@@ -36,4 +38,9 @@ export const AgregarCategoria = ( { onNuevaCategoria } ) => {
         />
     </form>
   )
+}
+
+AgregarCategoria.propTypes = {
+    onNuevaCategoria: PropTypes.func.isRequired
+
 }
